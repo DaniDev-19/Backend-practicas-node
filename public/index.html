@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-png" href="./node.png">
+    <title>Servidor Node</title>
+</head>
+<body>
+    <main class="container">
+        <div class="presentacion">
+            <h1>Servidor De Node.js</h1>
+            <p>podras encontrar apis con datos para tus practicas y consumirlas en tu aplicación</p>
+        </div>
+
+        <section class="grilla">
+            <div class="column-one">
+                <h2>Method: <i>GET</i></h2>
+                <span>Ruta: ('/users')</span>
+                <p>Te devolvera un array de objetos <strong> llave y valor</strong></p>
+            </div>
+
+            <div class="column-one">
+                <h2>Methop: <i>GET By :id</i></h2>
+                <span>Ruta: ('/users/:id')</span>
+                <p>Te devolvera un usuario por id del arrlego de objetos</p>
+            </div>
+
+            <div class="column-one">
+                <h2>methop: <i>POST</i></h2>
+                <span>Ruta: ('/users')</span>
+                <p>Podras crear un nuevo usuario el cual se guardara y persistira en el array de objetos</p>
+            </div>
+
+            <div class="column-two">
+                <h2>Methop: <i>PUT</i></h2>
+                <span>Ruta: ('/users/:id')</span>
+                <p>Te Permitira actualizar un usuario del array de objetos mediante su id</p>
+            </div>
+
+            <div class="column-two">
+                <h2>Methop: <i>DELETE</i></h2>
+                <span>Ruta: ('/users/:id')</span>
+                <p>Podras Eliminar un usuario del arreglo de objetos</p>
+            </div>
+        </section>
+
+        <div class="presentacion">
+            <a href="./apisT.html" title="Seguiente pagina">Siguiente</a>
+            <h1>Nota:  <span>Los Datos o Movimientos se guardan en un archivo .JSON que sirve como base de datos</span></h1>
+        </div>
+    </main>
+</body>
+
+<style>
+    body {
+        background: #141414;
+        color: #fffffe;
+        font-family: sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .presentacion {
+        text-align: center;
+        margin: 20px;
+    }
+
+    .container {
+        max-width: 900px;
+        width: 100%;
+    }
+
+    .grilla {
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px; 
+        padding: 20px;
+    }
+
+    .column-one, .column-two {
+        background: #1f1f1f;
+        padding: 15px;
+        border-radius: 8px;
+        border: 1px solid #333;
+        text-align: left;
+    }
+
+    h2 i { color: #4caf50; } /* Color para los métodos */
+    span { color: #ff9800; font-family: monospace; }
+
+    a {
+        text-decoration: none;
+        all: unset;
+        padding: 10px 10px;
+        background: #1a1a1a;
+        color: #ff9800;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+</html>
