@@ -3,12 +3,12 @@ const {getAllTaxis, createTaxi, getTaxisById, deleteTaxi, updateTaxi} = require(
 const router = Router();
 
 router
-    .route('/taxis')
+    .route('/taxi')
     .get(getAllTaxis)
     .post(createTaxi);
 
 router
-    .route('/taxis/:placa')
+    .route('/taxi/:placa')
     .get(getTaxisById)
     .put(updateTaxi)
     .delete(deleteTaxi);
