@@ -22,4 +22,13 @@ const errorHandler = (err, req, res, next) => {
     });
 };
 
-module.exports = errorHandler;
+const ErrorCustom = ({status, code = 500, message = 'Not Found'} = {}) => {
+    return {
+        status: status,
+        code: code,
+        message: message,
+    }
+};
+
+module.exports = errorHandler, ErrorCustom;
+

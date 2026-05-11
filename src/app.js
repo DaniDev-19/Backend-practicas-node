@@ -6,8 +6,10 @@ const fs = require('fs');
 const path = require('path');
 require('dotenv').config();
 
-
 const taxis = require('./routes/taxis.routes');
+const clientes = require('./routes/clientes.routes');
+const taller = require('./routes/taller.routes');
+const observerHeader = require('./middleware/header');
 const dbMiddleware = require('./middleware/db.middleware');
 const logMiddleware = require('./middleware/log.middleware');
 const errorMiddleware = require('./middleware/error.middleware');
@@ -46,7 +48,7 @@ app.use(helmet());
 
 app.use(dbMiddleware);
 app.use(logMiddleware);
-
+app.use(observerHeader);
 
 app.use(express.static(publicPath));
 
@@ -128,6 +130,8 @@ app.delete('/users/:id', (req, res) => {
 });
 
 app.use('/api', taxis); 
+app.use('/api', clientes); 
+app.use('/api', taller); 
 
 app.use(errorMiddleware);
 
